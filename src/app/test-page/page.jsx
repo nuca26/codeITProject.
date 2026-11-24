@@ -11,7 +11,7 @@ export default function Testpage() {
   },[count]
 );
  useEffect(()=>{
-  localStorage.setItem9("username","nuca26");
+  localStorage.setItem("username","nuca26");
  },[])
    
   const incrementByOne=()=>{
