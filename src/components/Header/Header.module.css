@@ -1,9 +1,10 @@
 .headerCont {
   padding: 15px 20px;
   max-width: var(--global-max-width);
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   display: flex;
   justify-content: space-between;
+  width: 90%;
   align-items: center;
 }
 

@@ -36,9 +36,10 @@ import styles from "./page.module.css";
       useEffect(() => {
         if (localStorage.getItem("todoTasks")===null)return;
         const dataInStorage=JSON.parse(localStorage.getItem("todoTasks"));
-        if(localStorage.length >0)setTasksArray(dataInStorage)
+         if(localStorage.length >0)setTasksArray(dataInStorage)
+        //   throw new Error("სერვერთან ვერ ხდება დაკავშირება,სცადეთ ხელახლა") 
       },[]);
-    
+
       useEffect(()=>{
         localStorage.setItem("todoTasks",JSON.stringify(tasksArray));
       }, [tasksArray]);
