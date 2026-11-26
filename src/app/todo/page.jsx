@@ -34,13 +34,20 @@ import styles from "./page.module.css";
     }
 
       useEffect(() => {
-    console.log(tasksArray);
-  }, [tasksArray]);
+        if (localStorage.getItem("todoTasks")===null)return;
+        const dataInStorage=JSON.parse(localStorage.getItem("todoTasks"));
+        if(localStorage.length >0)setTasksArray(dataInStorage)
+      },[]);
+    
+      useEffect(()=>{
+        localStorage.setItem("todoTasks",JSON.stringify(tasksArray));
+      }, [tasksArray]);
+
+
   // enter-ის listener
   const onKeyDown=(e)=>{
     if(e.Key === "Enter") addTask();
   }
-
 
   return <div className={styles.todoCont}>
     <div className={styles.inputCont}>
