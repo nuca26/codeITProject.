@@ -30,3 +30,9 @@ body{
 .errorCont button:hover{
   background-color: aliceblue;
 }
+.loaderCont{
+  text-align: center;
+}
+.notFoundCont{
+  margin: 0 auto;
+}
